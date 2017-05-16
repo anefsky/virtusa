@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Virtusa Project</title>
+  <script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body ng-controller="pageController">
+  <div class="wrapper" ng-class="{ disabled: showModal }">
+ 
+    <header>
+      <nav>
+        <nav-bar></nav-bar>
+      </nav>
+      <static-heading id='static-heading'></static-heading>
+    </header>
+
+    <main>
+      <week-totals id="week-totals"></week-totals>
+    </main>
+  
+  </div>
+
+  <modal-project class="modal-project" ng-show="showModal"></modal-project>
+
+  <script src="js/scripts.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/components/navBar.component.js"></script>
+  <script src="js/components/staticHeading.component.js"></script>
+  <script src="js/components/weekTotals.component.js"></script>
+  <script src="js/components/modalProject.component.js"></script>
+  
+</body>
+
+</html>

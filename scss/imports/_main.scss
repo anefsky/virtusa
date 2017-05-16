@@ -1,0 +1,93 @@
+main {
+	#week-totals {
+		width: 100%;
+		background: yellow;
+		display: block;
+		background-color: $color-background-light;
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.add-project {
+			float: left;
+			padding: 10px;
+			.choose-project {
+				.input-holder {
+					position: relative;
+					margin-top: 10px;
+					input {
+						height: 25px;
+						width: 200px;
+					}
+					&::before {
+						font-family: FontAwesome;
+						content: '\f002';
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						left: 10px;
+					}
+
+				}
+			}
+		}
+		ul.hours {
+			display: flex;
+			float: right;
+			li {
+				width: 70px;
+				padding-right: 10px;
+				.day {
+					font-size: 24px;
+					text-align: center;
+				}
+				.entered-hours-holder {
+					position: relative;
+					z-index: 100;
+					input.entered-hours {
+						font-size: 18px;
+						width: 60px;
+						text-align: right;
+						margin-top: 10px;
+						position: relative;
+					}
+					&:before {
+						position: relative;
+						font-family: FontAwesome;
+						position: absolute;
+						top: 15px;
+						left: 2px;
+						z-index: 100;
+					}
+
+					&.submitted {
+						&:before {
+							content: '\f00c'; //check
+							color: green;
+						}
+					}
+					&.rejected {
+						&:before {
+							content: '\f111'; //circle
+							color: red;
+						}
+						input {
+							color: red;
+							border-color: red;
+						}
+					}
+					&.approved {
+						&:before {
+							content: '\f00c\f00c'; //double check
+							color: green;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
+

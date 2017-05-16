@@ -1,0 +1,19 @@
+body {
+	width: 900px;
+	height: 1500px;
+	margin: 0 auto;
+	position: relative;
+
+
+	.wrapper {
+		&.disabled {
+			opacity: 0.3;
+			pointer-events: none;
+		}
+	}
+}
+li {
+	list-style: none;
+}
+
+

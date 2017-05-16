@@ -1,0 +1,146 @@
+body {
+  width: 900px;
+  height: 1500px;
+  margin: 0 auto;
+  position: relative; }
+  body .wrapper.disabled {
+    opacity: 0.3;
+    pointer-events: none; }
+
+li {
+  list-style: none; }
+
+main #week-totals {
+  width: 100%;
+  background: yellow;
+  display: block;
+  background-color: #eee; }
+  main #week-totals:after {
+    content: "";
+    display: table;
+    clear: both; }
+  main #week-totals .add-project {
+    float: left;
+    padding: 10px; }
+    main #week-totals .add-project .choose-project .input-holder {
+      position: relative;
+      margin-top: 10px; }
+      main #week-totals .add-project .choose-project .input-holder input {
+        height: 25px;
+        width: 200px; }
+      main #week-totals .add-project .choose-project .input-holder::before {
+        font-family: FontAwesome;
+        content: '\f002';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px; }
+  main #week-totals ul.hours {
+    display: flex;
+    float: right; }
+    main #week-totals ul.hours li {
+      width: 70px;
+      padding-right: 10px; }
+      main #week-totals ul.hours li .day {
+        font-size: 24px;
+        text-align: center; }
+      main #week-totals ul.hours li .entered-hours-holder {
+        position: relative;
+        z-index: 100; }
+        main #week-totals ul.hours li .entered-hours-holder input.entered-hours {
+          font-size: 18px;
+          width: 60px;
+          text-align: right;
+          margin-top: 10px;
+          position: relative; }
+        main #week-totals ul.hours li .entered-hours-holder:before {
+          position: relative;
+          font-family: FontAwesome;
+          position: absolute;
+          top: 15px;
+          left: 2px;
+          z-index: 100; }
+        main #week-totals ul.hours li .entered-hours-holder.submitted:before {
+          content: '\f00c';
+          color: green; }
+        main #week-totals ul.hours li .entered-hours-holder.rejected:before {
+          content: '\f111';
+          color: red; }
+        main #week-totals ul.hours li .entered-hours-holder.rejected input {
+          color: red;
+          border-color: red; }
+        main #week-totals ul.hours li .entered-hours-holder.approved:before {
+          content: '\f00c\f00c';
+          color: green; }
+
+body header {
+  position: relative; }
+  body header nav {
+    font-size: 12px;
+    height: 50px; }
+    body header nav ul {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #555; }
+      body header nav ul li {
+        color: white; }
+  body header #static-heading {
+    background-color: #bbb;
+    height: 50px;
+    display: block;
+    width: 100%;
+    z-index: 200;
+    text-align: center;
+    line-height: 50px; }
+
+body.fixed-heading header #static-heading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+body.fixed-heading main {
+  position: relative;
+  top: 50px; }
+
+.modal-project {
+  position: relative;
+  top: -25px;
+  padding: 25px;
+  background-color: #eee;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid black; }
+  .modal-project .add-project {
+    padding: 10px; }
+    .modal-project .add-project .choose-project .input-holder {
+      position: relative;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+      .modal-project .add-project .choose-project .input-holder input {
+        height: 25px;
+        width: 200px;
+        padding-left: 30px;
+        font-size: 16px; }
+      .modal-project .add-project .choose-project .input-holder::before {
+        font-family: FontAwesome;
+        content: '\f002';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px; }
+    .modal-project .add-project .choose-project li {
+      padding: 10px; }
+  .modal-project .close-modal {
+    font-size: 24px;
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    cursor: pointer; }
+
+/*# sourceMappingURL=styles.css.map */
